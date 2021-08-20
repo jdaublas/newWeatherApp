@@ -39,6 +39,7 @@ li {
   font-size: 64px;
   float: left;
   margin-top: -15px;
+  margin-left: 3px;
 }
 
 .weather-image img {
