@@ -55,3 +55,12 @@ li:first-letter {
 .weather-units {
   float: left;
 }
+
+.weather-units .active {
+  color: black;
+  cursor: default;
+}
+
+.weather-units .active:hover {
+  text-decoration: none;
+}

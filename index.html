@@ -27,6 +27,7 @@
                   placeholder="Search city"
                   class="form-control"
                   id="city-input"
+                  autocomplete="off"
                 />
               </div>
               <div class="col-4">
@@ -46,7 +47,10 @@
                 <img src="." alt="partly-sunny" id="icon" />
               </div>
               <strong id="temperature" class="temp-number"></strong>
-              <span class="weather-units">°C | <a href="#">°F </a></span>
+              <span class="weather-units"
+                ><a href="#" id="celcius-link" class="active">°C </a> |
+                <a href="#" id="faherenheit-link">°F </a></span
+              >
             </div>
 
             <div class="col-6">
