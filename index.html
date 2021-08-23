@@ -41,26 +41,28 @@
             <li>Last updated: <span id="date"></span></li>
             <li id="description"></li>
           </ul>
-          <div class="row">
-            <div class="col-6">
-              <div class="weather-image">
-                <img src="." alt="partly-sunny" id="icon" />
+          <div class="weather-temp">
+            <div class="row">
+              <div class="col-6">
+                <div class="weather-image">
+                  <img src="." alt="partly-sunny" id="icon" />
+                </div>
+                <strong id="temperature" class="temp-number"></strong>
+                <span class="weather-units"
+                  ><a href="#" id="celcius-link" class="active">°C</a> |
+                  <a href="#" id="faherenheit-link">°F</a></span
+                >
               </div>
-              <strong id="temperature" class="temp-number"></strong>
-              <span class="weather-units"
-                ><a href="#" id="celcius-link" class="active">°C </a> |
-                <a href="#" id="faherenheit-link">°F </a></span
-              >
-            </div>
 
-            <div class="col-6">
-              <ul>
-                <li>
-                  Humidity:
-                  <span id="humidity"></span>%
-                </li>
-                <li>Wind: <span id="speed"></span> km/h</li>
-              </ul>
+              <div class="col-6">
+                <ul>
+                  <li>
+                    Humidity:
+                    <span id="humidity"></span>%
+                  </li>
+                  <li>Wind: <span id="speed"></span> km/h</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -74,6 +76,7 @@
         </small>
       </div>
     </div>
+
     <script src="src/app.js"></script>
   </body>
 </html>

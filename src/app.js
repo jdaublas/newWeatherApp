@@ -63,6 +63,8 @@ function handleSubmit(event) {
 
 function showFaherenheitTemp(event) {
   event.preventDefault();
+  celciusLink.classList.remove("active");
+  faherenheitLink.classList.add("active");
   let temperatureElement = document.querySelector("#temperature");
   let faherenheitTemperature = (celciusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(faherenheitTemperature);
@@ -70,6 +72,8 @@ function showFaherenheitTemp(event) {
 
 function showCelciusTemp(event) {
   event.preventDefault();
+  celciusLink.classList.add("active");
+  faherenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
