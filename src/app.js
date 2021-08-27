@@ -69,22 +69,6 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function showFaherenheitTemp(event) {
-  event.preventDefault();
-  celciusLink.classList.remove("active");
-  faherenheitLink.classList.add("active");
-  let temperatureElement = document.querySelector("#temperature");
-  let faherenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(faherenheitTemperature);
-}
-
-function showCelciusTemp(event) {
-  event.preventDefault();
-  celciusLink.classList.add("active");
-  faherenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-}
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -128,15 +112,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-let celciusTemperature = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let faherenheitLink = document.querySelector("#faherenheit-link");
-faherenheitLink.addEventListener("click", showFaherenheitTemp);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", showCelciusTemp);
 
 search("El Salvador");
