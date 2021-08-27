@@ -25,6 +25,13 @@ function formatDate(timestamp) {
 
 //Display temperature
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "6dfa8826ffc57f6f6137d36396323455";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemperature(response) {
   celciusTemperature = response.data.main.temp;
   let temperatureElement = document.querySelector("#temperature");
@@ -45,6 +52,8 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 //searching url
@@ -78,7 +87,8 @@ function showCelciusTemp(event) {
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Mon", "Tue", "Wed", "Thurs", "Fri"];
@@ -116,4 +126,3 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCelciusTemp);
 
 search("El Salvador");
-displayForecast();
