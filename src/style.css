@@ -1,6 +1,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: lightsteelblue;
+  background-image: url("../images/Edmonton.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 
 h1 {
@@ -31,6 +34,7 @@ li:first-letter {
   text-transform: uppercase;
 }
 
+
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
@@ -40,7 +44,7 @@ li:first-letter {
   border: 1px transparent;
   border-radius: 5px;
   box-shadow: 5px 5px 5px grey;
-  background-color: antiquewhite;
+  background-color:lightcyan
 }
 
 .temp-number {
@@ -73,6 +77,7 @@ li:first-letter {
   margin-top: 20px;
   text-align: center;
   filter: brightness(90%);
+  margin-bottom: 20px;
 }
 
 .weather-forecast-date {
